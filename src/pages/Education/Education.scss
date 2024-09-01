@@ -1,0 +1,191 @@
+@import '../../index.scss';
+
+.education {
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0rem 6rem;
+
+        .heading-img-div {
+            .graduate-img {
+                width: 40vw;
+                height: 70vh;
+            }
+        }
+
+        .heading-text-div {
+            text-align: center;
+            padding: 0 3rem;
+
+            h1 {
+                @include h1-style;
+                font-size: 3.2rem;
+            }
+
+            h3 {
+                @include h2-style;
+                font-size: 1.5rem;
+                font-weight: 500;
+                padding-top: 1rem;
+            }
+
+            p {
+                @include p-style;
+                padding-top: 0.5rem;
+            }
+        }
+    }
+
+    .degrees {
+        .degrees-header-div {
+            text-align: center;
+
+            h1 {
+                @include h1-style;
+                font-size: 3rem;
+            }
+        }
+
+        .degrees-body-div {
+            padding: 5rem 0;
+
+            .degree-container-div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .degree-logo-div {
+                    border-radius: 50%;
+                    margin: 2rem;
+                    padding: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        height: 120px;
+                        width: 120;
+                        object-fit: contain;
+                    }
+                }
+
+                .degree-card {
+                    padding: 2rem;
+                    border-radius: 10px;
+
+                    .degree-card-header {
+                        display: flex;
+
+                        .degree-card-title {
+                            h2 {
+                                @include h2-style;
+                                font-size: 2rem;
+                                padding: 0.5rem 0;
+                            }
+
+                            h3 {
+                                @include h2-style;
+                                font-size: 1rem;
+                                padding: 0.5rem 0;
+                            }
+
+                        }
+
+                        .degree-card-duration {
+                            width: 55%;
+
+                            h3 {
+                                @include h2-style;
+                                font-size: 1rem;
+                                text-align: end;
+                                align-items: center;
+                                padding-top: 1rem;
+                            }
+                        }
+                    }
+
+                    .degree-card-content {
+                        p {
+                            @include p-style;
+                            font-size: 1rem;
+                            padding: 0.5rem 0;
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 768px) {
+        .heading {
+            flex-direction: column;
+            padding: 0 3rem;
+
+            .heading-img-div {
+                .graduate-img {
+                    width: 80vw;
+                    height: 40vh;
+                    object-fit: cover;
+                }
+            }
+
+            .heading-text-div {
+                padding: 0;
+
+                h1 {
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+
+                }
+
+                h3 {
+                    font-size: 1.2rem;
+                    padding-top: 2rem;
+                }
+
+                p {
+                    padding: 1.5rem 0;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .degrees{
+            .degrees-header-div {
+                text-align: center;
+                padding-top: 2rem;
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                }
+            }
+            .degrees-body-div {
+                padding-top: 0;
+                padding-bottom: 2rem;
+                .degree-container-div {
+                    padding: 0 2rem;
+                    flex-direction: column;
+    
+                    .degree-card {
+                        .degree-card-header {
+                            flex-direction: column;
+                            align-items: center;
+                            
+                            .degree-card-duration{
+                                display: flex;
+                                justify-content: flex-start;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}

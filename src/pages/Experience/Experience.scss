@@ -1,0 +1,283 @@
+@import '../../index.scss';
+
+.experience {
+    .experience-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0rem 6rem;
+
+        .experience-heading-img-div {
+            padding: 5rem;
+            border-radius: 30%;
+
+            .experience-img {
+                width: 30vw;
+                height: 50vh;
+                object-fit: cover; // Ensures image scales correctly
+            }
+        }
+
+        .experience-heading-text-div {
+            text-align: center;
+
+            h1 {
+                @include h1-style;
+                font-size: 3.2rem;
+            }
+
+            h3 {
+                @include h2-style;
+                font-size: 1.5rem;
+                font-weight: 500;
+                padding-top: 1rem;
+            }
+
+            p {
+                @include p-style;
+                padding-top: 0.5rem;
+            }
+        }
+    }
+
+    .experience-body {
+        .work-experience-heading {
+            h1 {
+                @include h1-style;
+                font-size: 3rem;
+                text-align: center;
+            }
+        }
+
+        .work-experience-body {
+            padding: 3rem;
+
+            .work-experience-section {
+                padding: 1rem 0;
+
+                .heading {
+                    h2 {
+                        padding: 0 10rem;
+                        @include h2-style;
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .work-experience-card {
+                    margin: 2rem 10rem;
+                    padding: 2rem;
+                    border-radius: 10px;
+
+                    .card-header {
+                        display: flex;
+                        width: 100%;
+                        flex-wrap: wrap; // Allows wrapping for smaller screens
+
+                        .card-img {
+                            padding: 0 1rem;
+
+                            img {
+                                height: 60px;
+                                width: 60px;
+                                object-fit: cover; // Ensures image scales correctly
+                                scale: 1;
+                                transition: all 0.4s;
+
+                                &:hover {
+                                    scale: 1.2;
+                                }
+                            }
+                        }
+
+                        .card-title {
+                            padding: 0 0.1rem;
+
+                            .role-name {
+                                h2 {
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            .company-name {
+                                h3 {
+                                    @include h2-style;
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+
+                        .card-duration {
+                            text-align: end;
+                            padding-left: 36rem;
+                            flex-basis: 100%; // Ensures duration is placed correctly on smaller screens
+
+                            h3 {
+                                @include h2-style;
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+
+                    .card-content {
+                        ul {
+                            padding: 1.5rem;
+
+                            li {
+                                list-style: none;
+                                padding: 0.2rem 0;
+                                display: flex;
+                                justify-content: flex-start;
+                                // Ensures icons wrap on smaller screens
+
+                                font-size: 1rem;
+                                gap: 10px;
+
+                                .icons {
+                                    margin-left: 1.5rem;
+                                    display: flex;
+                                    flex-wrap: wrap;
+
+                                    .icon {
+                                        width: 4rem;
+                                        height: 4rem;
+                                        margin-right: 1rem;
+                                        margin-top: 1rem;
+                                        scale: 1;
+                                        transition: all 0.4s;
+
+                                        &:hover {
+                                            scale: 1.2;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        p {
+                            @include p-style;
+                            font-size: 1rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .experience-heading {
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+
+            .experience-heading-img-div {
+                padding: 2rem;
+
+                .experience-img {
+                    width: 80vw;
+                    height: 50vh;
+                }
+            }
+
+            .experience-heading-text-div {
+                padding: 0 2rem;
+
+                h1 {
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                }
+
+                h3 {
+                    font-size: 1.2rem;
+                    padding-top: 2rem;
+                }
+
+                p {
+                    padding: 1.5rem 0;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .experience-body {
+            padding: 2rem 0;
+
+            .work-experience-heading {
+                padding: 0 1.1rem;
+
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                }
+            }
+
+            .work-experience-body {
+                padding: 1rem 0;
+
+                .work-experience-section {
+                    padding: 2rem 0;
+
+                    .heading {
+                        h2 {
+                            padding: 0 2rem;
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .work-experience-card {
+                        margin: 1.5rem 2rem;
+                        padding: 1.5rem;
+
+                        .card-header {
+                            width: 100%;
+                            flex-direction: column;
+
+                            .card-img {
+                                padding: 0;
+
+                                img {
+                                    height: 60px;
+                                    width: 60px;
+                                    object-fit: cover; // Ensures image scales correctly
+                                }
+                            }
+
+                            .card-duration {
+                                text-align: start;
+                                padding-left: 0;
+
+                                h3 {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+
+                        .card-content {
+                            padding-top: 1rem;
+
+                            ul {
+                                padding: 0.2rem;
+
+                                li {
+                                    .icons {
+                                        margin-left: 1.5rem;
+                                        display: flex;
+                                        flex-wrap: wrap;
+
+                                        .icon {
+                                            width: 3rem;
+                                            height: 3rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

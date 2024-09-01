@@ -1,0 +1,60 @@
+Home Page:
+->  Hello.
+    I'm Rakshith R. 
+    Full Stack Developer, Problem Solving Enthusiast, Software Engineer Enthusiast. 
+    Always learning.
+
+-?  Here's what I do
+    ⚡ Building responsive website front end using ReactJS 
+    ⚡ Backend development using NodeJS, ExpressJS and MongoDB
+
+Educations Page:
+->  Degrees Received
+    Reva University          2020 - 2024
+    B.Tech. in Computer Engineering
+    ⚡ I have studied core subjects like Data Structures, DBMS & SQL, Networking and Operating System.
+    ⚡ I have also Web Development using ReactJS for frontend, and NodeJS ,ExpressJS and MongoDB.
+    ⚡ I have implemented several projects based on what I've learnt under my Computer Engineering course.
+
+Skills Page:
+-> C
+-> C++
+-> Java
+-> Python
+-> Html
+-> Css
+-> Javascript
+-> ReactJS
+-> NodeJS
+-> MongoDB
+-> SQL
+-> Git
+-> GitHub
+-> Tailwind
+-> Sass
+
+Experience Page:
+->  Experience
+    I've completed one internship. I've mostly done projects on my own and I am actively looking for full time jobs.
+
+    Interships
+    Myntra Software Engineer Intern         2023-2024
+
+Projects:
+->  My projects makes use of vast variety of latest technology tools. My best experience is to create  Data Science projects. Below are some of my projects. Note that not all of the mentioned projects are on GitHub yet.
+
+Artbabba
+Tech Stack: React.js, Express.js, Node.js, MongoDB, CSS
+Developed a blogging platform designed to showcase artists' talents using the MERN stack.
+Implemented user authentication and authorization with JSON Web Tokens (JWT).
+Created a well-structured menu to navigate the home page, content, create posts, and integrated like/dislike functionality for each post.
+
+Sorting Visualizer
+Tech Stack: React.js, Redux, CSS
+Created a project to visualize and analyze sorting algorithms using React.js.
+Implemented a structured control panel to customize array size, sorting speed, and algorithm selection, with Redux for state management.
+Included functionality to display the time complexity and space complexity of the selected algorithm.
+
+Contact Me:
+-> You can contact me at the places mentioned below. I will try to get back to you as fast as I can.
+

@@ -1,0 +1,162 @@
+@import '../../index.scss';
+
+.contact {
+    .contact-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0rem 6rem;
+
+        .contact-heading-img-div {
+            padding: 5rem;
+            border-radius: 30%;
+
+            .contact-img {
+                width: 30vw;
+                height: 50vh;
+                object-fit: cover; // Ensures image scales correctly
+            }
+        }
+
+        .contact-heading-text-div {
+            text-align: center;
+
+            h1 {
+                @include h1-style;
+                font-size: 3.2rem;
+            }
+
+            h3 {
+                @include h2-style;
+                font-size: 1.5rem;
+                font-weight: 500;
+                padding-top: 1rem;
+            }
+
+            p {
+                @include p-style;
+                padding-top: 0.5rem;
+            }
+
+            .social-media{
+                ul {
+                    padding-top: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    gap: 1rem;
+
+                    li {
+                        list-style: none;
+                        
+                        a {
+                            text-align: center;
+                            align-items: center;
+                            justify-content: center;
+                            img {
+                                width: 48px;
+                                height: 48px;
+                                scale: 1;
+                                transition: all 0.4s;
+                                &:hover{
+                                    scale: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-body{
+        padding: 0rem 6rem;
+        .find-me{
+            text-align: center;
+            .find-me-header{
+                h1 {
+                    @include h1-style;
+                    font-size: 3.2rem;
+                }
+            }
+            .find-me-content{
+                p {
+                    @include p-style;
+                    padding-top: 0.5rem;
+                }
+                .find-me-links{
+                    ul {
+                        padding-top: 1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+    
+                        gap: 1rem;
+    
+                        li {
+                            list-style: none;
+                            
+                            a {
+                                img {
+                                    width: 44px;
+                                    height: 44px;
+                                    scale: 1;
+                                    transition: all 0.4s;
+                                    &:hover{
+                                        scale: 1.2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    @media (max-width: 768px) {
+        .contact-heading {
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+
+            .contact-heading-img-div {
+                padding: 2rem;
+
+                .contact-img {
+                    width: 80vw;
+                    height: 50vh;
+                }
+            }
+
+            .contact-heading-text-div {
+                padding: 0 2rem;
+
+                h1 {
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                }
+
+                h3 {
+                    font-size: 1.2rem;
+                    padding-top: 2rem;
+                }
+
+                p {
+                    padding: 1.5rem 0;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .contact-body{
+            padding: 2rem 2rem;
+            margin: 2rem 0;
+        }
+
+    }
+}

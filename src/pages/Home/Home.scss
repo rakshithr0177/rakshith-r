@@ -1,0 +1,240 @@
+@import '../../index.scss';
+
+.home {
+    .greeting-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3rem;
+        margin-bottom: 5rem;
+
+        .greeting-text-div {
+            h1 {
+                @include h1-style;
+                font-size: 5rem;
+            }
+
+            h2 {
+                @include h2-style;
+                font-size: 3rem;
+
+                span {
+                    margin-left: 10px;
+                    text-shadow: 1px 0px 2px rgba(150, 30, 30, 0.8);
+                    color: #E72929;
+                }
+            }
+
+            p {
+                @include p-style;
+                font-size: 2rem;
+            }
+
+            width: 35vw;
+
+            .resume-button {
+                margin-top: 2rem;
+                font-size: 1.5rem;
+                padding: 0.6rem 1rem;
+                border: none;
+                border-radius: 5px;
+                background-color: #3498db;
+                color: #fff;
+                cursor: pointer;
+                transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+
+                &:hover {
+                    background-color: #e63946;
+                    box-shadow: 0 4px 8px rgba(230, 57, 70, 0.3);
+                    transform: translateY(-2px);
+                }
+
+
+                &:active {
+                    transform: translateY(0);
+                    box-shadow: 0 2px 4px rgba(230, 57, 70, 0.3);
+                }
+            }
+        }
+
+    }
+
+    .skills {
+        margin-top: 4rem;
+
+        .skills-heading {
+            h1 {
+                @include h1-style;
+                font-size: 5rem;
+                text-align: center;
+            }
+        }
+
+        .skills-body {
+            margin: 4rem 0;
+
+            .skills-main {
+
+                display: flex;
+                justify-content: center;
+                padding: 0 5rem;
+                gap: 5rem;
+                margin-top: 5rem;
+                margin-bottom: 10rem;
+
+                .item {
+                    flex: 1;
+                }
+
+                .software-skills {
+                    margin-top: 2rem;
+                    margin-left: 2rem;
+
+                    img {
+                        width: 3rem;
+                        height: 3rem;
+                        margin: 0 1rem;
+                        scale: 1;
+                        transition: all 0.4s;
+
+                        &:hover {
+                            scale: 1.2;
+                        }
+                    }
+                }
+
+                .skills-content {
+                    .skills-main-heading {
+                        h2 {
+                            @include h2-style;
+                            font-size: 3rem;
+                            font-weight: 500;
+                            padding-bottom: 1rem;
+                        }
+                    }
+
+                    ul {
+
+                        li {
+                            list-style: none;
+                            padding: 0.2rem 0;
+                            display: flex;
+                            justify-content: flex-start;
+                            font-size: 1rem;
+                            gap: 10px;
+
+                            p {
+                                @include p-style;
+                                font-size: 1.2rem;
+                                line-height: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .greeting-main {
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 0.7rem;
+
+            .greeting-text-div {
+                width: 80vw;
+                text-align: center;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                h2 {
+                    font-size: 1.8rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+
+                .resume-button {
+                    font-size: 1rem;
+                    padding: 0.5rem 1rem;
+                }
+            }
+
+            .greeting-image-div {
+                margin-top: 1rem;
+                width: 22rem;
+            }
+        }
+
+        .skills {
+            .skills-heading {
+                margin-bottom: 0;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .skills-body {
+                padding: 0 2rem;
+
+                .skills-main {
+                    display: flex;
+                    justify-content: flex-start;
+                    padding: 0;
+                    gap: 1.3rem;
+                    margin-top: 0;
+                    margin-bottom: 5rem;
+
+                    flex-direction: column;
+
+                    .item1 {
+                        order: 2;
+                    }
+
+                    .item2 {
+                        order: 1;
+                    }
+
+                    .software-skills {
+                        margin-top: 0;
+                        margin-left: 2rem;
+
+                        img {
+                            width: 3rem;
+                            height: 3rem;
+                            margin: 0 1rem;
+
+                        }
+                    }
+
+                    .skills-content {
+                        .skills-main-heading {
+                            h2 {
+                                font-size: 1.8rem;
+                            }
+                        }
+
+                        ul {
+
+                            li {
+                                justify-content: flex-start;
+                                font-size: 1rem;
+                                gap: 10px;
+
+                                p {
+                                    @include p-style;
+                                    font-size: 1.2rem;
+                                    line-height: 1.8rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,256 @@
+@import '../../index.scss';
+
+.project {
+    .project-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0rem 6rem;
+
+        .project-heading-img-div {
+            padding: 5rem;
+
+            .project-img {
+                width: 30vw;
+                height: 50vh;
+                object-fit: cover; // Ensures image scales correctly
+            }
+        }
+
+        .project-heading-text-div {
+            text-align: center;
+
+            h1 {
+                @include h1-style;
+                font-size: 3.2rem;
+            }
+
+            h3 {
+                @include h2-style;
+                font-size: 1.5rem;
+                font-weight: 500;
+                padding-top: 1rem;
+            }
+
+            p {
+                @include p-style;
+                padding-top: 0.5rem;
+            }
+        }
+    }
+
+    .project-body {
+        .project-work-heading {
+            h1 {
+                @include h1-style;
+                font-size: 3rem;
+                text-align: center;
+            }
+        }
+
+        .project-work-body {
+            .project-work-card {
+                display: flex;
+                align-items: center;
+                border-radius: 10px;
+                margin: 4rem;
+                padding: 3rem;
+
+                .project-work-img {
+                    img {
+                        height: 20rem;
+                        width: 40rem;
+                        object-fit: contain;
+                        padding-right: 2rem;
+                        border-radius: 10px;
+                        scale: 1;
+                        transition: all 0.4s;
+
+                        &:hover {
+                            scale: 1.025;
+                        }
+                    }
+                }
+
+                .project-work-content {
+                    .project-work-header {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap; // Ensure it wraps on smaller screens
+
+                        .project-work-heading {
+                            .project-work-title {
+                                h2 {
+                                    @include h2-style;
+                                    font-size: 2.5rem;
+                                }
+
+                                h3 {
+                                    @include h2-style;
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+
+                        .project-work-duration {
+                            padding-top: 1rem;
+
+                            h3 {
+                                @include h2-style;
+                                font-size: 1.2rem;
+                            }
+
+                            .project-work-links {
+                                a {
+                                    padding: 0.5rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .project-work-body {
+                        padding: 1rem 0;
+
+                        ul {
+                            li {
+                                padding-top: 0.5rem;
+                                list-style: none;
+                                display: flex;
+                                justify-content: flex-start;
+
+                                font-size: 1rem;
+                                gap: 10px;
+
+                                .icons {
+                                    margin-left: 1.5rem;
+                                    display: flex;
+                                    flex-wrap: wrap;
+
+                                    img {
+                                        width: 4rem;
+                                        height: 4rem;
+                                        margin-right: 1rem;
+                                        margin-top: 1rem;
+                                        scale: 1;
+                                        transition: all 0.4s;
+
+                                        &:hover {
+                                            scale: 1.2;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        p {
+                            @include p-style;
+                            font-size: 1rem;
+                            line-height: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .project-heading {
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+
+            .project-heading-img-div {
+                padding: 2rem;
+
+                .project-img {
+                    width: 80vw;
+                    height: 50vh;
+                }
+            }
+
+            .project-heading-text-div {
+                padding: 0 2rem;
+
+                h1 {
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                }
+
+                h3 {
+                    font-size: 1.2rem;
+                    padding-top: 2rem;
+                }
+
+                p {
+                    padding: 1.5rem 0;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .project-body {
+            padding: 2rem 0;
+
+            .project-work-body {
+                .project-work-card {
+                    flex-direction: column; // Stacks content vertically for smaller screens
+                    margin: 2rem 1rem;
+                    padding: 2rem;
+                    justify-content: space-between;
+
+                    .item1 {
+                        order: 2;
+                    }
+
+                    .item2 {
+                        order: 1;
+                    }
+
+                    .project-work-img {
+                        img {
+                            width: 100%;
+                            height: 10rem; // Full width for smaller screens
+                            padding-right: 0;
+                            padding-top: 0;
+                            margin-top: 0;
+                        }
+                    }
+
+                    .project-work-content {
+                        margin-bottom: 1rem;
+
+                        .project-work-header {
+
+                            flex-direction: column; // Stacks header content
+
+                            .project-work-duration {
+                                text-align: start;
+                                padding-top: 1rem;
+
+                            }
+                        }
+
+                        .project-work-body {
+                            padding: 1rem 0;
+
+                            ul {
+                                li {
+                                    .icons {
+                                        img {
+                                            width: 2rem;
+                                            height: 2rem;
+                                            margin-right: 1rem;
+                                            margin-top: 1rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

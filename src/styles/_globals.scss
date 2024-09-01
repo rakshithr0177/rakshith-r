@@ -1,0 +1,44 @@
+@import './mixins';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+    @include default-front;
+    height: 100%
+}
+
+.theme-container {
+    min-height: 100vh;
+    &[mode="light"] {
+        @include light-mode;
+
+        span, h1, h2, h3, a {
+            color: $light-secondary-color-text-color;
+        }
+
+        .card{
+            @include light-card;
+        }
+    }
+
+    &[mode="dark"] {
+        @include dark-mode;
+
+        span, h1, h2, h3, a {
+            color: $dark-secondary-color-text-color;
+        }
+
+        .card{
+            @include dark-card;
+        }
+    }
+}
